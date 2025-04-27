@@ -1,0 +1,43 @@
+# Build output
+/bin/
+/obj/
+/out/
+  
+# User-specific files
+.idea/            # JetBrains Rider / IntelliJ IDEA project files
+.vscode/          # Visual Studio Code settings
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+  
+# Windows Installer files
+Thumbs.db
+ehthumbs.db
+
+# .NET specific files
+*.user
+*.userprefs
+.vs/
+.vs2019/
+.vs2017/
+.vscode/
+*/bin/
+*/obj/
+  
+# Avalonia-specific generated files
+.generated/
+
+# Android Studio / Xamarin / Android SDK build files
+.gradle/
+build/
+.idea/
+local.properties
+*.iml
+.DS_Store
+
+# macOS
+.DS_Store
+
+# Windows
+Desktop.ini
