@@ -44,6 +44,7 @@ project.fragment.lock.json
 
 # DotNet-specific files
 *.dll
+!tests/**/*.dll # Ignore all dll files except in the tests directory
 *.exe
 *.pdb
 *.cache
@@ -52,6 +53,7 @@ project.fragment.lock.json
 *.targets
 
 # Temporary files
+
 *.tmp
 *.temp
 *.pidb
