@@ -34,4 +34,4 @@ jobs:
 
     # Run tests
     - name: Run tests
-      run: dotnet test ./src/DartsAssistant/DartsAssistant.sln --no-build --verbosity normal --configuration Release
+      run: dotnet test ./src/DartsAssistant/DartsAssistant.sln --no-build --verbosity normal --configuration Release --logger "console;verbosity=detailed"
