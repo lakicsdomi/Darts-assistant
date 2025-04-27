@@ -26,12 +26,12 @@ jobs:
 
     # Restore dependencies
     - name: Restore dependencies
-      run: dotnet restore ./DartsAssistant.sln
+      run: dotnet restore ./src/DartsAssistant/DartsAssistant/DartsAssistant.csproj
 
     # Build the project
     - name: Build
-      run: dotnet build  ./src/DartsAssistant.sln --no-restore --configuration Release
+      run: dotnet build ./src/DartsAssistant/DartsAssistant/DartsAssistant.csproj --no-restore --configuration Release
 
     # Run tests
     - name: Run tests
-      run: dotnet test ./src/DartsAssistant.sln --no-build --verbosity normal --configuration Release
+      run: dotnet test ./tests/DartsAssistantTests/DartsAssistantTests/DartsAssistantTests.csproj --no-build --verbosity normal --configuration Release
