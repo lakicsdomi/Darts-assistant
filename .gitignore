@@ -1,43 +1,76 @@
-# Build output
-/bin/
-/obj/
-/out/
-  
+# Ignore build outputs
+bin/
+obj/
+
 # User-specific files
-.idea/            # JetBrains Rider / IntelliJ IDEA project files
-.vscode/          # Visual Studio Code settings
 *.user
-*.suo
 *.userosscache
+*.suo
 *.sln.docstates
-  
-# Windows Installer files
-Thumbs.db
-ehthumbs.db
 
-# .NET specific files
-*.user
-*.userprefs
-.vs/
-.vs2019/
-.vs2017/
+# Logs
+*.log
+*.tlog
+
+# IDE-specific files
 .vscode/
-*/bin/
-*/obj/
-  
-# Avalonia-specific generated files
-.generated/
+.idea/
+*.vs/
 
-# Android Studio / Xamarin / Android SDK build files
+# Avalonia-specific files
+*.designer.cs
+*.g.cs
+*.g.i.cs
+
+# Android-specific files
 .gradle/
 build/
-.idea/
 local.properties
+*.apk
+*.ap_
+*.dex
+*.class
+*.keystore
+*.so
+*.cxx/
+*.ndk/
+*.aab
+
+# NuGet packages
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# DotNet-specific files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.config
+*.props
+*.targets
+
+# Temporary files
+*.tmp
+*.temp
+*.pidb
+*.svclog
+*.sln.ide
+*.sln.cache
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Rider-specific files
+.idea/
 *.iml
-.DS_Store
+out/
 
-# macOS
-.DS_Store
+# Visual Studio Code-specific files
+.vscode/
 
-# Windows
-Desktop.ini
+# JetBrains Rider-specific files
+.idea/
