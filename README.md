@@ -24,7 +24,7 @@ With the Avalonia MVVM Community Toolkit, this application provides a robust and
 
 To build and run the application, you need:
 
-- [Visual Studio](https://visualstudio.microsoft.com/) or [JetBrains Rider](https://www.jetbrains.com/rider/) with .NET SDK installed.
+- [Visual Studio](https://visualstudio.microsoft.com/) with .NET SDK installed.
 - Android emulator or a physical Android device for testing.
 
 ### Installation
