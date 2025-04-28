@@ -34,4 +34,4 @@ jobs:
 
     # Run tests
     - name: Run tests
-      run: dotnet test ./tests/DartsAssistantTests/DartsAssistantTests.csproj --configuration Release
+      run: dotnet test ./tests/DartsAssistantTests/DartsAssistantTests/DartsAssistantTests.csproj --configuration Release
