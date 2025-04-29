@@ -11,6 +11,10 @@ With the Avalonia MVVM Community Toolkit, this application provides a robust and
 - **Game Modes**: Support for various darts game modes (e.g., X01, Cricket).
 - **User-Friendly Interface**: Designed with an intuitive and responsive UI for Android devices.
 
+## UI design
+
+![Android 15-Page 1 Copy](https://github.com/user-attachments/assets/1d825462-d651-42da-914e-b9af07b0e2fe)
+
 ## Technologies Used
 
 - **Framework**: [Avalonia](https://avaloniaui.net/) - Cross-platform UI framework for .NET.
