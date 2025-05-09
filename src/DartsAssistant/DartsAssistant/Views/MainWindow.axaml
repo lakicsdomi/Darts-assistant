@@ -1,20 +1,104 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:DartsAssistant.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="DartsAssistant.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="DartsAssistant">
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+<Window xmlns="https://github.com/avaloniaui"  
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+        xmlns:vm="using:DartsAssistant.ViewModels"  
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+        mc:Ignorable="d"  
+        x:Class="DartsAssistant.Views.MainWindow"  
+        x:DataType="vm:MainWindowViewModel"  
+        Icon="/Assets/avalonia-logo.ico"  
+        d:DesignWidth="400" d:DesignHeight="800" Title="Darts Assistant">  
+  
+    <Design.DataContext>  
+        <!-- This only sets the DataContext for the previewer in an IDE,  
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->  
+        <vm:MainWindowViewModel/>  
+    </Design.DataContext>  
+    <Viewbox>  
+    <Grid RowDefinitions="Auto,Auto,Auto" Background="#1E1E2D" Width="400" Height="800">  
+        <!-- Top Navigation Bar -->  
+        <Grid Row="0" Margin="0,15,0,10">  
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">  
+                <TextBlock Text="Game" Foreground="LightGreen" FontSize="16" FontWeight="Bold" Margin="10,0"/>  
+                <TextBlock Text="Statistics" Foreground="Gray" FontSize="16" Margin="10,0"/>  
+                <TextBlock Text="Checkout" Foreground="Gray" FontSize="16" Margin="10,0"/>  
+            </StackPanel>  
+        </Grid>  
+  
+        <!-- Player Info Section -->  
+        <Grid Row="1" ColumnDefinitions="auto,auto" Margin="0,0,0,10" HorizontalAlignment="Stretch" Width="400">   
+            <!-- Player 1 -->  
+            <Border Grid.Column="0" Background="DarkBlue" CornerRadius="8" Margin="5" Width="180">  
+                <StackPanel>  
+                    <TextBlock Text="John Doe" Foreground="White" FontWeight="Bold" FontSize="14" Margin="10"/>  
+                    <TextBlock Text="Score: 501" Foreground="LightGray" FontSize="12" Margin="10,3,3,3"/>  
+                    <TextBlock Text="Throws: 24" Foreground="LightGray" FontSize="12" Margin="10,3,3,3"/>  
+                    <TextBlock Text="First 9: 65.3" Foreground="LightGray" FontSize="12" Margin="10,3,3,3"/>  
+                    <TextBlock Text="Avg: 62.8" Foreground="LightGray" FontSize="12" Margin="10,3,3,10"/>  
+                </StackPanel>  
+            </Border>  
+  
+            <!-- Player 2 -->  
+            <Border Grid.Column="1" Background="#2A2A40" CornerRadius="8" Margin="5" Width="180">  
+                <StackPanel>  
+                    <TextBlock Text="Jane Smith" Foreground="White" FontWeight="Bold" FontSize="14" Margin="10"/>  
+                    <TextBlock Text="Score: 421" Foreground="LightGray" FontSize="12" Margin="10,3,3,3"/>  
+                    <TextBlock Text="Throws: 24" Foreground="LightGray" FontSize="12" Margin="10,3,3,3"/>  
+                    <TextBlock Text="First 9: 58.2" Foreground="LightGray" FontSize="12" Margin="10,3,3,3"/>  
+                    <TextBlock Text="Avg: 55.4" Foreground="LightGray" FontSize="12" Margin="10,3,3,10"/>  
+                </StackPanel>  
+            </Border>  
+        </Grid>  
+  
+        <!-- Current Round Section -->  
+        <Grid RowDefinitions="auto,auto,auto,auto" Row="2" VerticalAlignment="Top" HorizontalAlignment="Center">  
+              
+            <!-- Current Rows-->  
+            <Border Grid.Row="0" Background="#2A2A40" CornerRadius="8" HorizontalAlignment="Center" Margin="10">   
+                <StackPanel>  
+                    <TextBlock Text="Current Round"  FontWeight="Bold" Foreground="LightGray" FontSize="17" Margin="10,20,10,10" HorizontalAlignment="Center" Height="30"/>  
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,10,20">  
+                        <TextBlock Text="T20" Foreground="White" FontWeight="Bold" FontSize="20" Margin="20,0,20,0"/>  
+                        <TextBlock Text="D16" Foreground="White" FontWeight="Bold" FontSize="20" Margin="20,0,20,0"/>  
+                        <TextBlock Text="S15" Foreground="White" FontWeight="Bold" FontSize="20" Margin="20,0,20,0"/>  
+                        <TextBlock Text="=" Foreground="LightGreen"  FontWeight="Bold" FontSize="20" Margin="20,0,20,0"/>  
+                        <TextBlock Text="91" Foreground="White"  FontWeight="Bold" FontSize="20" Margin="20,0,20,0"/>  
+                    </StackPanel>  
+                </StackPanel>  
+            </Border>  
+  
+            <!-- Buttons for Score Tracking -->  
+            <Grid Grid.Row="1" HorizontalAlignment="Center" Margin="10,0,10,10" VerticalAlignment="Top" RowDefinitions="auto" ColumnDefinitions="Auto,Auto,Auto,auto,auto" Width="400">    
+                <Button Grid.Column="0" Content="Miss" Background="Red" Foreground="White" Width="150" Grid.ColumnSpan="2" Margin="2" Height="40"/>    
+                <Button Grid.Column="2" Content="Bull" Background="Green" Foreground="White" Width="150" Grid.ColumnSpan="2" Margin="2" Height="40" />    
+                <Button Grid.Column="4" Content="Undo" Background="#D4A017" Foreground="White" Width="70" Margin="2" Height="40" />    
+            </Grid>  
+  
+            <!-- Numeric Keypad -->    
+               <!-- Generate buttons dynamically using a DataTemplate or binding in the ViewModel -->    
+               <ItemsControl Grid.Row="2" ItemsSource="{Binding NumericButtons}" Width="400" Height="200" Margin="10,0,10,0" HorizontalAlignment="Center">    
+                   <ItemsControl.ItemsPanel>    
+                       <ItemsPanelTemplate>    
+                           <UniformGrid Rows="4" Columns="5"/>    
+                       </ItemsPanelTemplate>    
+                   </ItemsControl.ItemsPanel>    
+                   <ItemsControl.ItemTemplate>    
+                       <DataTemplate>    
+                           <Button Background="#333344" Foreground="White" Margin="5,6,5,6" Width="75" Height="45">
+                                <TextBlock Text="{Binding}" Foreground="White" FontSize="16" TextAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
+						   </Button>
+                       </DataTemplate>    
+                   </ItemsControl.ItemTemplate>    
+               </ItemsControl>    
+  
+            <!-- Single/Double/Triple -->  
+            <Grid Grid.Row="3" RowDefinitions="auto" ColumnDefinitions="Auto,Auto,Auto" HorizontalAlignment="Center" Width="400" Margin="10,10,10,10">  
+                <Button  Grid.Column="0" Content="Single" Background="#0EBFE9" Foreground="White" Width="120" Margin="3" Height="40"/>  
+                <Button Grid.Column="1" Content="Double" Background="Red" Foreground="White" Width="120" Margin="3" Height="40"/>  
+                <Button Grid.Column="2" Content="Triple" Background="Green" Foreground="White" Width="120" Margin="3" Height="40"/>  
+            </Grid>  
+        </Grid>  
+    </Grid>  
+    </Viewbox>  
 </Window>
